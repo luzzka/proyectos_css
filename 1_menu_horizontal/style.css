@@ -1,0 +1,49 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    /*para que todo este en el borde de la pagina*/
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgb(106, 53, 156);
+    color: white;
+    width: 100%;
+}
+
+nav .mobile {
+    display: none;
+}
+
+nav .logo {
+    min-width: 250px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 20px 25px;
+}
+
+nav a:hover {
+    color: black;
+    background-color: rgb(190, 164, 236);
+}
+
+nav .desktop {
+    display: flex;
+    justify-content: space-between; /*espacio horizontal*/
+    align-items: center;   /*alineacion vertical*/
+    padding: 0 20px;
+}
+
+nav .desktop .primary, 
+nav .desktop .secondary {
+    display: flex;
+}
+
+nav .desktop .secondary.mini {
+    display: none;
+}
+
