@@ -5,6 +5,11 @@ body {
     padding: 0;
 }
 
+
+.collapsed {
+    display: none;
+}
+
 nav {
     background-color: rgb(106, 53, 156);
     color: white;
@@ -13,6 +18,27 @@ nav {
 
 nav .mobile {
     display: none;
+}
+
+nav .mobile .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*alineamiento vertical*/
+    padding-left: 10px;
+}
+
+nav .mobile .header .more button {
+    display: flex;
+    border: none;
+    background-color: rgb(106, 53, 156);
+    color: white;
+    padding: 22px;
+    cursor: pointer;    /* para que el cursor cambie de flecha a puntero*/
+}
+
+nav .mobile .header .more button:hover {
+    color: black;
+    background-color: rgb(190, 164, 236);
 }
 
 nav .logo {
@@ -45,5 +71,41 @@ nav .desktop .secondary {
 
 nav .desktop .secondary.mini {
     display: none;
+}
+
+@media screen and (max-width: 925px) {
+    nav .logo {
+        min-width: 100px;
+    }
+
+    nav .secondary.full {
+        display: none;
+    }
+
+    nav .secondary.mini {
+        display: block !important;
+    }
+
+    nav .secondary.mini .submenu {
+        background-color: rgb(106, 53, 156);
+        position: absolute;
+        display: none;
+        width: 170px;
+        right: 0;
+    }
+
+    nav .secondary.mini:hover .submenu { /*'~' seleccionar la capa a lado de more, que es submenu*/
+        display: block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav .desktop {
+        display: none;
+    }
+
+    nav .mobile {
+        display: block;
+    }
 }
 
